@@ -21,8 +21,18 @@ int main(){
   tabuleiro[7][9] = 3;
   tabuleiro[8][9] = 3;
   tabuleiro[9][9] = 3;
-
   
+  //posicionando o navio diagonal (canto superior esquerdo ao canto inferior direito)
+  for(int d = 0; d < 10; d++){
+    tabuleiro[d][d] = 3;
+  }
+
+  //posicionando o segundo navio na diagonal (canto superior direito ao canto inferior esquerdo)
+  for(int d_coluna = 0; d_coluna < 10; d_coluna++){
+    int d_linha = 9 - d_coluna;
+    tabuleiro[d_coluna][d_linha] = 3;
+  }
+
   printf(" TABULEIRO BATALHA NAVAL \n");
   printf("   ");
 
@@ -31,11 +41,11 @@ int main(){
     printf("%s ", letras[l]);
   }
 
-  printf("\n");
-  
+  printf("\n");    
+
   // exibindo o tabuleiro 
   for (int linha = 0; linha < 10; linha++){
-    
+
     printf("%2d ", linha + 1);
     for (int coluna = 0; coluna < 10; coluna++){
       printf("%d ", tabuleiro[linha][coluna]);

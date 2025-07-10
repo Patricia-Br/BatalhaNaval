@@ -22,6 +22,9 @@ int main(){
   tabuleiro[8][9] = 3;
   tabuleiro[9][9] = 3;
 
+
+    //difinindo as posições diagonais dos navios
+  // for(int navio1 = 0; )
   
   printf(" TABULEIRO BATALHA NAVAL \n");
   printf("   ");
